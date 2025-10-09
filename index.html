@@ -10,10 +10,71 @@
     <div class="cabecalho">
         <h1>Crie e compartilhe seu evento.</h1>
         <p>O primeiro passo é preencher esse formulário de inscrição.</p>
-        <div class="formulario-box ">
+        <div class="form-container">
             <h2>Informações do Evento</h2>
             <hr>
+            <label>Título do evento   <small>(mínimo 8 caracteres)</small></label>
+            <input type="text" minlength="8" required>
+            
+            <label>Link do evento   <small>(comece com https://)</small></label>
+            <input type="url" pattern="https://.*" required>
+            
+            <label>Whatsapp para contato <small>  (somente números)</small></label>
+            <input type="text" pattern="[0-9]{8,15}" required>
+            
+            <label>Informações extras</label>
+            <textarea></textarea>
+            
+            <label>Categoria</label>
+            <select>
+            <option value="">Tipo do evento</option>
+            <option value="workshop">Workshop</option>
+            <option value="palestra">Palestra</option>
+            <option value="curso">Curso</option>
+            <option value="outro">Outro</option>
+            </select>
+            
+            <div class="privacidade">
+                <h3>Privacidade</h3>
+                <hr>
+                <label>E-mail do administrador <small>(digite um email válido)</small></label>
+                <input type="email" required>
+                
+                <label>Senha de acesso para os participantes <small>(mínimo 8 caracteres)</small></label>
+                <input type="password" minlength="8" required>
+                
+                <label class="checkbox-container">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            Evento privado
+            </label>
+                <h2>Data e Hora</h2>
+            </div>
+            
+            <div class="bloco-horario">
 
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" placeholder="dd/mm/aaaa">
+                </div>
+
+                <div class="campo">
+                    <label for="hora-inicio">Das</label>
+                    <input type="time" id="hora-inicio">
+                </div>
+
+                <div class="campo">
+                    <label for="hora-fim">Até</label>
+                    <input type="time" id="hora-fim">
+                </div>
+                </div>
+            
+                
+            
+        </div>
+        <div class="button-box">
+            <button type="submit">Salvar Evento</button>
+        </div>
         </div>
     
     </div>

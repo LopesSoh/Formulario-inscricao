@@ -18,7 +18,7 @@ body {
     font-size: 36px;
     text-align: left;
     margin: 0 auto;
-    margin-left: 380px;
+    margin-left: 280px;
     width: 30%;
 }
 
@@ -27,27 +27,222 @@ body {
     font-size: 18px;
     margin-top: 25px;
     text-align: left;
-    margin-left: 380px;
+    margin-left: 280px;
     width: 25%
     
 }
 
-.formulario-box{
-    background: white;
+
+
+.form-container {
+  background: white;
     width:670px;
-    margin: 30px auto;
-    margin-left: 380px;
+    margin: auto;
+    margin-left: auto;
     margin-top: 40px;
     padding: 22px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-
 }
-.formulario-box h2{
+
+.form-container h2 {
     color: black;
     text-align: left;
     margin: 0 auto;
     margin-left: 20px;
     margin-top: 40px;
     ;
+}
+
+
+label {
+    color: #111;
+    display: block;
+    margin-top: 25px;
+    font-size: small;
+ 
+}
+
+small {
+    margin-left: 10px;
+    color: #9b9b9b;
+}
+
+input{
+    margin-top: 10px;
+    padding: 15px 200px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+}
+input:focus{
+    border: 1px solid red;
+    outline: none;
+}
+
+textarea {
+  resize: none;
+  padding: 70px 200px;
+  margin-top: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+}
+
+textarea:focus{
+    border: 1px solid red;
+    outline: none;
+}
+select {
+    margin-top: 10px;
+    padding: 15px 200px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+}
+hr{
+    border: #d3d3d3 solid 0.1px;
+}
+
+.privacidade {
+  margin-top: 25px;
+}
+
+.privacidade h3, 
+.datahora h3 {
+  margin-bottom: 10px;
+  color: #2c1c3c;
+}
+
+.datahora input{
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #3a3a3a;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Esconde o checkbox padrão */
+.checkbox-container input {
+  display: none;
+}
+
+/* Cria o quadradinho */
+.checkmark {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito quando marcado */
+.checkbox-container input:checked + .checkmark {
+  border:1.5px solid #d3d3d3;
+  background-color: transparent;
+}
+
+/* Cria o “✔” */
+.checkbox-container .checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #45bdf0;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+/* Mostra o “✔” quando marcado */
+.checkbox-container input:checked + .checkmark::after {
+  display: block;
+}
+
+.bloco-horario {
+  display: flex;
+  gap: 20px;              /* espaço entre as caixas */
+  align-items: flex-start;
+  flex-wrap: wrap;        /* quebra linha se faltar espaço */
+  margin-top: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                /* faz cada campo se ajustar proporcionalmente */
+  min-width: 160px;
+}
+
+.campo label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #4a3b63;         /* tom roxo suave */
+}
+
+.campo input {
+  border: 1.5px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  color: #3a3a3a;
+}
+
+.campo input:focus {
+  border-color: #45bdf0;
+  outline: none;
+}
+
+/* Faz o campo de data ocupar mais espaço */
+.campo:first-child {
+  flex: 2; /* o dobro do tamanho dos outros */
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+.button-box{
+    background: #F0F0F4;
+    width:670px;
+    height: 80px;
+    margin-top:1px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 22px;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background: #5ce791;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a4bd6;
 }
