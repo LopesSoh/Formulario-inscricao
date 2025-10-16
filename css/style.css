@@ -1,3 +1,12 @@
+/* fazer o reset (denifir margem e padding como 0) sempre que likar o css */
+/* 
+  *{
+    margin:0
+    padding:0
+    box-sizing:500px
+  }
+*/
+
 body {
     font-family: Arial;
     background-color: #d9d9d9;
